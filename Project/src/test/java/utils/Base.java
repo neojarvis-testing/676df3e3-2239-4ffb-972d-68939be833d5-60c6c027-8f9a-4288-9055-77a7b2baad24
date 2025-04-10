@@ -15,13 +15,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
-
+ 
 public class Base {
-
+ 
     public static WebDriver driver;
     public static FileInputStream file;
     public static Properties prop;
-
+ 
     public static void loadProperties() throws IOException {
         String propertiesPath = System.getProperty("user.dir") + "/config/browser.properties";
         try {
@@ -34,7 +34,7 @@ public class Base {
 
         }
     }
-
+ 
     public void openBrowser() {
 
         try {
@@ -52,10 +52,9 @@ public class Base {
                 gridUrl = new URL(prop.getProperty("gridurl"));
                 driver = new RemoteWebDriver(gridUrl, new ChromeOptions());
             } catch (MalformedURLException e) {
-
                 e.printStackTrace();
             }
-
+ 
         } else if ("local".equalsIgnoreCase(executionType)) {
             switch (browserName.toLowerCase()) {
                 case "chrome":
@@ -69,7 +68,7 @@ public class Base {
                 case "firefox":
                     driver = new FirefoxDriver();
                     break;
-
+ 
                 default:
                     System.err.println("Unsupported browser: " + browserName);
                     break;
@@ -77,9 +76,9 @@ public class Base {
         } else {
             System.err.println("Invalid execution type: " + executionType);
         }
-
+ 
         if (driver != null)
-
+          
         {
             driver.manage().window().maximize();
             driver.get(prop.getProperty("url"));

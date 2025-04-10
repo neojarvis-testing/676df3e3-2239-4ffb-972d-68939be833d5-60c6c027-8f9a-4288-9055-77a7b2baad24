@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.Set;
-
+ 
 public class WebDriverHelper extends Base {
 
     /*
@@ -28,7 +28,7 @@ public class WebDriverHelper extends Base {
 
         }
     }
-
+  
     /*
      * a. Method Name: waitForElementToBeVisible()
      * b. Author Name: Umang Raj
@@ -60,12 +60,11 @@ public class WebDriverHelper extends Base {
             new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds))
                     .until(ExpectedConditions.elementToBeClickable(locator));
         } catch (Exception e) {
-
             Screenshot.captureScreenshot(e.getMessage());
-
+ 
         }
     }
-
+ 
     /*
      * a. Method Name: waitForValueToBeEntered()
      * b. Author Name: Umang Raj
@@ -262,3 +261,4 @@ public class WebDriverHelper extends Base {
     }
 
 }
+
