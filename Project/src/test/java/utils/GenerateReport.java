@@ -1,5 +1,4 @@
 package utils;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -71,7 +70,6 @@ public class GenerateReport {
         if (!screenshotsDir.exists()) {
             screenshotsDir.mkdirs();
         }
-
         File target = new File(screenshotsDir, name);
         try {
             Files.copy(file, target);
@@ -80,7 +78,6 @@ public class GenerateReport {
         }
         return destPath;
     }
-
     public static void attachScreenshotToReport(String filename, ExtentTest test, String description) {
         try {
             test.log(Status.INFO, description,
