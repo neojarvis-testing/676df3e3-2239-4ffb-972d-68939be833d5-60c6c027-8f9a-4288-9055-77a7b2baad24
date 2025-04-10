@@ -1,10 +1,15 @@
 package utils;
+
+import org.testng.Assert;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
  
 import org.testng.Assert;
  
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
- 
+
 public class Assertion {
     public static void assertionVerifyByEqual(String actual, String expected, ExtentTest test) {
         try {
@@ -20,7 +25,7 @@ public class Assertion {
             test.log(Status.WARNING, "Entered Wrong  Credentials." + e1.getMessage());
         }
     }
- 
+
     public static void assertionVerifyByContains(String actualText, String expectedText, ExtentTest test) {
         try {
             if (actualText.contains(expectedText)) {
