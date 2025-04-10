@@ -1,15 +1,12 @@
 package utils;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import com.aventstack.extentreports.ExtentTest;
 import com.google.common.io.Files;
 
 public class Screenshot extends Base {
