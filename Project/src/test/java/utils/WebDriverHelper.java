@@ -8,17 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.Set;
-
+ 
 public class WebDriverHelper extends Base {
-
-    /*
-     * a. Method Name: hardWait()
-     * b. Author Name: Umang Raj
-     * c. Description: This method is used to give some wait
-     * d. Parameters: By locator, int timeoutInSeconds
+     /* d. Parameters: By locator, int timeoutInSeconds
      * e. Return type: void
      */
     public void hardWait(long milisecs) {
@@ -28,7 +22,7 @@ public class WebDriverHelper extends Base {
 
         }
     }
-
+  
     /*
      * a. Method Name: waitForElementToBeVisible()
      * b. Author Name: Umang Raj
@@ -37,7 +31,6 @@ public class WebDriverHelper extends Base {
      * d. Parameters: By locator, int timeoutInSeconds
      * e. Return type: void
      */
-
     public void waitForElementToBeVisible(By locator, int timeoutInSeconds) {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds))
@@ -46,7 +39,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: waitForElementToBeClickable()
      * b. Author Name: UmangRaj
@@ -60,12 +52,11 @@ public class WebDriverHelper extends Base {
             new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds))
                     .until(ExpectedConditions.elementToBeClickable(locator));
         } catch (Exception e) {
-
             Screenshot.captureScreenshot(e.getMessage());
-
+ 
         }
     }
-
+ 
     /*
      * a. Method Name: waitForValueToBeEntered()
      * b. Author Name: Umang Raj
@@ -74,7 +65,6 @@ public class WebDriverHelper extends Base {
      * d. Parameters: By locator, String value, int timeoutInSeconds
      * e. Return type: void
      */
-
     public void waitForValueToBeEntered(By locator, String value, int timeoutInSeconds) {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds))
@@ -83,12 +73,7 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
-    /*
-     * a. Method Name: clickOnElement()
-     * b. Author Name: Umang Raj
-     * c. Description: This method is used to perform click operation on the web
-     * elements
+     /* elements
      * d. Parameters: By locator
      * e. Return type: void
      */
@@ -100,7 +85,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: sendKeys()
      * b. Author Name: Umang Raj
@@ -108,7 +92,6 @@ public class WebDriverHelper extends Base {
      * d. Parameters: By locator, String data
      * e. Return type: void
      */
-
     public void sendKeys(By locator, String data) {
         try {
             WebElement webElement = driver.findElement(locator);
@@ -117,7 +100,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: getText()
      * b. Author Name: Umang Raj
@@ -125,7 +107,6 @@ public class WebDriverHelper extends Base {
      * d. Parameters: By locator
      * e. Return type: String (actualText)
      */
-
     public String getText(By locator) {
         try {
             WebElement webElement = driver.findElement(locator);
@@ -135,7 +116,6 @@ public class WebDriverHelper extends Base {
             return null;
         }
     }
-
     /*
      * a. Method Name: jsClick()
      * b. Author Name: Umang Raj
@@ -152,7 +132,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: javascriptScroll()
      * b. Author Name: Umang Raj
@@ -170,7 +149,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: javascriptHighlight()
      * b. Author Name: Umang Raj
@@ -187,7 +165,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: switchDriverToNewWinow()
      * b. Author Name: Umang Raj
@@ -209,7 +186,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: enterAction()
      * b. Author Name: Umang Raj
@@ -225,7 +201,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: actionDownAndEnter()
      * b. Author Name: Umang Raj
@@ -242,7 +217,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: hoverOverElement()
      * b. Author Name: Umang Raj
@@ -262,3 +236,4 @@ public class WebDriverHelper extends Base {
     }
 
 }
+
