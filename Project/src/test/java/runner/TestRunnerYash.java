@@ -23,7 +23,7 @@ public class TestRunnerYash extends Base {
     public static ExtentReports reports;
     @BeforeClass
     public static void makeRep(){
-        reports = GenerateReport.createReporter("Mayors_Reports");
+        reports = GenerateReport.initializeExtentReport("Mayors_Reports");
 
         
         

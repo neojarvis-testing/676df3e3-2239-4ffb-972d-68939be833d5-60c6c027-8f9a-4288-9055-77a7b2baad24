@@ -12,11 +12,7 @@ import java.time.Duration;
 import java.util.Set;
  
 public class WebDriverHelper extends Base {
-    /*
-     * a. Method Name: hardWait()
-     * b. Author Name: Umang Raj
-     * c. Description: This method is used to give some wait
-     * d. Parameters: By locator, int timeoutInSeconds
+     /* d. Parameters: By locator, int timeoutInSeconds
      * e. Return type: void
      */
     public void hardWait(long milisecs) {
@@ -77,11 +73,7 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-    /*
-     * a. Method Name: clickOnElement()
-     * b. Author Name: Umang Raj
-     * c. Description: This method is used to perform click operation on the web
-     * elements
+     /* elements
      * d. Parameters: By locator
      * e. Return type: void
      */
