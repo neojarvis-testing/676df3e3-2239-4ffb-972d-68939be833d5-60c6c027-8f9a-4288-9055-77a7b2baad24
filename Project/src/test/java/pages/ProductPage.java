@@ -13,7 +13,9 @@ import uistore.JewelryLocator;
 import utils.Assertion;
 import utils.Base;
 import utils.ExcelReader;
+import utils.GenerateReport;
 import utils.LoggerHandler;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class ProductPage {
