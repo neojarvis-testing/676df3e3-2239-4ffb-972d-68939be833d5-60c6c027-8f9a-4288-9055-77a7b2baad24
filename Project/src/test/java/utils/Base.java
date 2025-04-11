@@ -79,7 +79,7 @@ public class Base {
         }
 
         if (driver != null)
-
+        
         {
             driver.manage().window().maximize();
             driver.get(prop.getProperty("url"));
