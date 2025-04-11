@@ -18,6 +18,7 @@ public class HomePageLocators_Kasak {
     public static By rolex  = By.cssSelector("li a[href='/c/Brands/Rolex/']");
 
     public static By brands = By.cssSelector("li a[href='/c/Brands/']");
+    public static By keyword = By.xpath("//span[contains(text(),'About Mayors')]");
     
     
 }

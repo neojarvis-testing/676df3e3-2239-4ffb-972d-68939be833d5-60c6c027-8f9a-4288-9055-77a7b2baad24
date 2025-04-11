@@ -1,19 +1,18 @@
 package pages;
 
-import org.openqa.selenium.By;
-
 import com.aventstack.extentreports.ExtentTest;
 
+import uistore.HomePageLocators_Kasak;
 import utils.Assertion;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
-public class FooterResult_Kasak {
-    WebDriverHelper wb = new WebDriverHelper();
 
-    public void aboutMayorsVerify(ExtentTest test){
+public class FooterResult_Kasak {
+
+    public static void aboutMayorsVerify(ExtentTest test){
 
         try{
             
@@ -26,7 +25,7 @@ public class FooterResult_Kasak {
         }
     }
 
-        public void pressMediaVerify(ExtentTest test){
+        public static void pressMediaVerify(ExtentTest test){
             try{
 
    
@@ -40,7 +39,7 @@ public class FooterResult_Kasak {
         }
 
         
-        public void careersVerify(ExtentTest test){
+        public static void careersVerify(ExtentTest test){
             try{
 
         Assertion.assertionVerifyByEqual(Base.driver.getCurrentUrl(), ExcelReader.readCellValue("sheet4", "3", "value"), test);
@@ -56,7 +55,7 @@ public class FooterResult_Kasak {
 
         }
         
-        public void sustainVerify(ExtentTest test){
+        public static void sustainVerify(ExtentTest test){
             try{
 
         Assertion.assertionVerifyByEqual(Base.driver.getCurrentUrl(), ExcelReader.readCellValue("sheet4", "5", "value"), test);
@@ -70,7 +69,7 @@ public class FooterResult_Kasak {
         
         }
         
-        public void newsletterVerify(ExtentTest test){
+        public static void newsletterVerify(ExtentTest test){
             try{
 
                 Assertion.assertionVerifyByEqual(Base.driver.getCurrentUrl(), ExcelReader.readCellValue("sheet4", "7", "value"), test);
@@ -85,7 +84,7 @@ public class FooterResult_Kasak {
             }
         }
 
-       public void weddingVerify(ExtentTest test){
+       public static void weddingVerify(ExtentTest test){
         try{
 
 
@@ -103,7 +102,7 @@ public class FooterResult_Kasak {
        }
       
 
-       public void rolexVerify(ExtentTest test){
+       public static void rolexVerify(ExtentTest test){
         try{
 
             Assertion.assertionVerifyByEqual(Base.driver.getCurrentUrl(), ExcelReader.readCellValue("sheet4", "11", "value"), test);
@@ -117,8 +116,10 @@ public class FooterResult_Kasak {
 
        }
         
-       public void brandVerify(ExtentTest test){
+       public static void brandVerify(ExtentTest test){
         try{
+
+            WebDriverHelper wb = new WebDriverHelper();
 
 
             Assertion.assertionVerifyByEqual(Base.driver.getCurrentUrl(), ExcelReader.readCellValue("sheet4", "13", "value"), test);
@@ -128,7 +129,7 @@ public class FooterResult_Kasak {
      
 
 
-        Assertion.assertionVerifyByEqual(wb.getText(By.xpath("//span[contains(text(),'About Mayors')]")),ExcelReader.readCellValue("sheet4", "15", "value") , test);
+        Assertion.assertionVerifyByEqual(wb.getText(HomePageLocators_Kasak.keyword),ExcelReader.readCellValue("sheet4", "15", "value") , test);
 
 
         }catch(AssertionError e){
@@ -136,6 +137,20 @@ public class FooterResult_Kasak {
         }
 
     }
+
+    public static void verifyAllTerms(ExtentTest test){
+        aboutMayorsVerify(test);
+        pressMediaVerify(test);
+        careersVerify(test);
+        sustainVerify(test);
+        newsletterVerify(test);
+        weddingVerify(test);
+        rolexVerify(test);
+        brandVerify(test);
+
+    }
+
+
 
 
     }

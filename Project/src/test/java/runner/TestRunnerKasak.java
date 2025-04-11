@@ -33,22 +33,12 @@ public class TestRunnerKasak extends Base {
     @Test
     public void TestCaseTen(){
         test = reports.createTest(Thread.currentThread().getName());
-        HomePage_Kasak.AboutMayors(test);
-        HomePage_Kasak.careersFunc(test);
-        HomePage_Kasak.sustainFunc(test);
-        HomePage_Kasak.pressRoomFunc(test);
-        HomePage_Kasak.newsletterFunc(test);
-        HomePage_Kasak.categoriesFunc(test);
+        HomePage_Kasak.Categories(test);
+        FooterResult_Kasak.verifyAllTerms(test);
+        
+    
 
-        FooterResult_Kasak actions = new FooterResult_Kasak();
-        actions.aboutMayorsVerify(test);
-        actions.pressMediaVerify(test);
-        actions.careersVerify(test);
-        actions.sustainVerify(test);
-        actions.newsletterVerify(test);
-        actions.weddingVerify(test);
-        actions.rolexVerify(test);
-        actions.brandVerify(test);
+        
 
         
     }
