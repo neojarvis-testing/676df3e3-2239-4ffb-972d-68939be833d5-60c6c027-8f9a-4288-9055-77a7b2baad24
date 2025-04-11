@@ -20,7 +20,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
  
-/**
+/*
  * Creator: Divyansh Gour
  *
  * Description: The Reporter class provides methods to generate and manage ExtentReports.
