@@ -8,7 +8,9 @@ import uistore.JewelryLocator;
 import utils.Assertion;
 import utils.Base;
 import utils.ExcelReader;
+import utils.GenerateReport;
 import utils.LoggerHandler;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class ProductPage {
@@ -72,12 +74,17 @@ public class ProductPage {
     public static void addCart(ExtentTest test) {
         try {
 
-            WebDriverHelper wb = new WebDriverHelper();
-            Assertion.assertionVerifyByEqual(wb.getText(BrandLocators.AddToShoppingbag), ExcelReader.readCellValue("sheet6","7"  ,"value"), test);
+             WebDriverHelper wb = new WebDriverHelper();
+             Assertion.assertionVerifyByEqual(wb.getText(BrandLocators.AddToShoppingbag), ExcelReader.readCellValue("sheet6","7"  ,"value"), test);
      
-            wb.clickOnElement(BrandLocators.AddToShoppingbag);
-            LoggerHandler.info(wb.getText(BrandLocators.AddToShoppingbag));
-            test.log(Status.INFO, wb.getText(BrandLocators.AddToShoppingbag));
+             wb.clickOnElement(BrandLocators.AddToShoppingbag);
+             LoggerHandler.info(wb.getText(BrandLocators.AddToShoppingbag));
+             test.log(Status.INFO, wb.getText(BrandLocators.AddToShoppingbag));
+             wb.javascriptHighlight(BrandLocators.AddToShoppingbag);
+             Screenshot.captureScreenshot("RingAdded");
+             GenerateReport.attachScreenshotToReport("Product Added", test, "Ring Added Successfully.");
+
+           
         } catch (Exception e) {
              LoggerHandler.info(e.getMessage());
         }
