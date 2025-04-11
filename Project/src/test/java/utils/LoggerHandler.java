@@ -37,6 +37,7 @@ public class LoggerHandler {
             // logger.addAppender(defaultAppender);
 
 
+
         } catch (Exception e) {
             logger.error("Failed to initialize logger file appender", e);
         }
