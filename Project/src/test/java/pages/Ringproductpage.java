@@ -10,7 +10,9 @@ import com.aventstack.extentreports.Status;
 
 import uistore.JewelryLocator;
 import utils.Base;
+import utils.GenerateReport;
 import utils.LoggerHandler;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class Ringproductpage {
