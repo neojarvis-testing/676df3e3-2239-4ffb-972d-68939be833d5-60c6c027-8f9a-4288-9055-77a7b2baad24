@@ -17,7 +17,7 @@ public class HomePageUmang {
 
     public static void verifyTitle(ExtentTest test) {
      
-      Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("Sheet3", "1", "value"), test);
+      Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("Sheet1", "1", "value"), test);
 
     }
 

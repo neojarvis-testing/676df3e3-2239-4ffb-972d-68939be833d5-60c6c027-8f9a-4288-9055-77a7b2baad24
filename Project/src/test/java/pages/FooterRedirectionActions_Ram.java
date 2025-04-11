@@ -10,14 +10,12 @@ import utils.WebDriverHelper;
 public class FooterRedirectionActions_Ram {
 
     WebDriverHelper wb = new WebDriverHelper();
-    // Assertion as = new Assertion();
     ExtentTest test;
     
     public void yoursecurity(){
         try {
             String current_url = Base.driver.getCurrentUrl();
             String expected_url = "https://www.mayors.com/your-security";
-            //Assertion.assertionVerifyByEqual(current_url, expected_url, test);
             System.out.println("works");
             Assert.assertEquals(current_url, expected_url);
             
