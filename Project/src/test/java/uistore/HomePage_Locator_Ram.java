@@ -2,8 +2,10 @@ package uistore;
 
 import org.openqa.selenium.By;
 
+//ram
 public class HomePage_Locator_Ram {
 
+    //ram
     public static By yoursecurity = By.cssSelector("a[href='/your-security']");
     //public static By yoursecurity = By.xpath("//a[text()='Your Security']");
     public static By terms = By.cssSelector("a[href='/terms-and-conditions']");

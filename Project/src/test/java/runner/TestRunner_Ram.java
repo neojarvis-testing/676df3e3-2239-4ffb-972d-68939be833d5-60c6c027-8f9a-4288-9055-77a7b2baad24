@@ -20,18 +20,20 @@ public class TestRunner_Ram extends Base {
     HomePageActions_Ram homepage = new HomePageActions_Ram();
     public ExtentTest test;
     public ExtentReports report;
-
+    //ram
     @BeforeClass
     public void createReport(){
-        report = GenerateReport.createReporter("Mayors_Report");
+        report = GenerateReport.initializeExtentReport("Mayors_Report");
     }
-
+    //ram
     @BeforeMethod
     public void browserConfig() {
         openBrowser();
         driver.findElement(By.id("onetrust-accept-btn-handler")).click();
         
     }
+    //ram
+
     @Test
     public void verifyingFooterLinks(){
 
@@ -47,12 +49,12 @@ public class TestRunner_Ram extends Base {
         homepage.categoryVerification();
     }
 
-
+    //ram
     @AfterMethod
     public void killBrowser() {
         driver.quit();
     }
-
+    //ram
     @AfterClass
     public void flush(){
         report.flush();
