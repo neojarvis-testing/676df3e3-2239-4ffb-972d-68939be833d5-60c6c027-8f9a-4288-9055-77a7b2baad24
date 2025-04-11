@@ -34,7 +34,7 @@ public static ExtentTest test;
 @BeforeTest
 public void openreport()
 {
-    reports=GenerateReport.createReporter("Mayors Report");
+    reports=GenerateReport.initializeExtentReport("Mayors Report");
 }
 @BeforeMethod
 public void setupbrowser()

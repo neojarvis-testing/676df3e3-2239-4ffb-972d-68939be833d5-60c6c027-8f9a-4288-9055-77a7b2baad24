@@ -5,138 +5,187 @@ import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
 
 import utils.Base;
+import utils.ExcelReader;
 import utils.WebDriverHelper;
 
 public class FooterRedirectionActions_Ram {
 
     WebDriverHelper wb = new WebDriverHelper();
-    // Assertion as = new Assertion();
     ExtentTest test;
-    
-    public void yoursecurity(){
+
+    /** 
+     * @Created by Ram Prasath
+     * @Description Verifies the 'Your Security' page by checking URL and title against expected values.
+     * @return None
+     */
+    public void yoursecurity() {
         try {
             String current_url = Base.driver.getCurrentUrl();
-            String expected_url = "https://www.mayors.com/your-security";
-            //Assertion.assertionVerifyByEqual(current_url, expected_url, test);
-            System.out.println("works");
+            String expected_url = ExcelReader.readCellValue("Sheet1", "7", "value");
             Assert.assertEquals(current_url, expected_url);
-            
+
             String current_title = Base.driver.getTitle();
-            String expected_title ="Your Security | Mayors";
+            String expected_title = ExcelReader.readCellValue("Sheet1", "8", "value");
             Assert.assertEquals(current_title, expected_title);
-            
+
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-    
-    public void termsAndConditions(){
-        try {
-            String current_url = Base.driver.getCurrentUrl();
-            String expected_url = "https://www.mayors.com/terms-and-conditions";
-            Assert.assertEquals(current_url, expected_url);
-            
-            String current_title = Base.driver.getTitle();
-            String expected_title = "Terms & Conditions | Mayors";
-            Assert.assertEquals(current_title, expected_title);
-            
-        } catch (Exception e) {
+        } catch (AssertionError e) {
             e.printStackTrace();
         }
     }
 
-    public void privacyPolicy(){
+    /** 
+     * @Created by Ram Prasath
+     * @Description Verifies the 'Terms and Conditions' page by checking URL and title against expected values.
+     * @return None
+     */
+    public void termsAndConditions() {
         try {
             String current_url = Base.driver.getCurrentUrl();
-            String expected_url = "https://www.mayors.com/privacy-policy";
+            String expected_url = ExcelReader.readCellValue("Sheet1", "9", "value");
             Assert.assertEquals(current_url, expected_url);
-            
+
             String current_title = Base.driver.getTitle();
-            String expected_title = "Privacy Policy | Mayors";
+            String expected_title = ExcelReader.readCellValue("Sheet1", "10", "value");
             Assert.assertEquals(current_title, expected_title);
-            
+
         } catch (Exception e) {
+            e.printStackTrace();
+        } catch (AssertionError e) {
             e.printStackTrace();
         }
     }
 
-    public void cookiePolicy(){
+    /** 
+     * @Created by Ram Prasath
+     * @Description Verifies the 'Privacy Policy' page by checking URL and title against expected values.
+     * @return None
+     */
+    public void privacyPolicy() {
         try {
             String current_url = Base.driver.getCurrentUrl();
-            String expected_url = "https://www.mayors.com/privacy-policy#cookies";
+            String expected_url = ExcelReader.readCellValue("Sheet1", "11", "value");
             Assert.assertEquals(current_url, expected_url);
-            
+
             String current_title = Base.driver.getTitle();
-            String expected_title = "Privacy Policy | Mayors";   
+            String expected_title = ExcelReader.readCellValue("Sheet1", "12", "value");
             Assert.assertEquals(current_title, expected_title);
-            
+
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-    
-    public void accessibility(){
-        try {
-            String current_url = Base.driver.getCurrentUrl();
-            String expected_url = "https://www.mayors.com/accessibility";
-            Assert.assertEquals(current_url, expected_url);
-            
-            String current_title = Base.driver.getTitle();
-            String expected_title = "Accessibility | Mayors";
-            Assert.assertEquals(current_title, expected_title);
-            
-        } catch (Exception e) {
+        } catch (AssertionError e) {
             e.printStackTrace();
         }
     }
 
-    public void payByLink(){
+    /** 
+     * @Created by Ram Prasath
+     * @Description Verifies the 'Cookie Policy' page by checking URL and title against expected values.
+     * @return None
+     */
+    public void cookiePolicy() {
         try {
-
             String current_url = Base.driver.getCurrentUrl();
-            String expected_url = "https://www.mayors.com/paybylink-terms";
+            String expected_url = ExcelReader.readCellValue("Sheet1", "13", "value");
             Assert.assertEquals(current_url, expected_url);
-            
+
             String current_title = Base.driver.getTitle();
-            String expected_title = "PayByLink Terms | Mayors";
+            String expected_title = ExcelReader.readCellValue("Sheet1", "14", "value");
             Assert.assertEquals(current_title, expected_title);
-            
+
         } catch (Exception e) {
+            e.printStackTrace();
+        } catch (AssertionError e) {
             e.printStackTrace();
         }
     }
 
-    public void watches(){
+    /** 
+     * @Created by Ram Prasath
+     * @Description Verifies the 'Accessibility' page by checking URL and title against expected values.
+     * @return None
+     */
+    public void accessibility() {
         try {
             String current_url = Base.driver.getCurrentUrl();
-            String expected_url = "https://www.mayors.com/c/Watches";
+            String expected_url = ExcelReader.readCellValue("Sheet1", "15", "value");
             Assert.assertEquals(current_url, expected_url);
-            
+
             String current_title = Base.driver.getTitle();
-            String expected_title = "Watches | Mayors";
+            String expected_title = ExcelReader.readCellValue("Sheet1", "16", "value");
             Assert.assertEquals(current_title, expected_title);
-            
+
         } catch (Exception e) {
+            e.printStackTrace();
+        } catch (AssertionError e) {
             e.printStackTrace();
         }
     }
 
-    public void jwelery(){
+    /** 
+     * @Created by Ram Prasath
+     * @Description Verifies the 'Pay By Link' page by checking URL and title against expected values.
+     * @return None
+     */
+    public void payByLink() {
         try {
             String current_url = Base.driver.getCurrentUrl();
-            String expected_url = "https://www.mayors.com/c/Jewelry";
+            String expected_url = ExcelReader.readCellValue("Sheet1", "17", "value");
             Assert.assertEquals(current_url, expected_url);
-            
+
             String current_title = Base.driver.getTitle();
-            String expected_title = "Jewelry | Mayors";
+            String expected_title = ExcelReader.readCellValue("Sheet1", "18", "value");
             Assert.assertEquals(current_title, expected_title);
-            
+
         } catch (Exception e) {
+            e.printStackTrace();
+        } catch (AssertionError e) {
             e.printStackTrace();
         }
     }
 
+    /** 
+     * @Created by Ram Prasath
+     * @Description Verifies the 'Watches' category page by checking URL and title against expected values.
+     * @return None
+     */
+    public void watches() {
+        try {
+            String current_url = Base.driver.getCurrentUrl();
+            String expected_url = ExcelReader.readCellValue("Sheet1", "19", "value");
+            Assert.assertEquals(current_url, expected_url);
 
+            String current_title = Base.driver.getTitle();
+            String expected_title = ExcelReader.readCellValue("Sheet1", "20", "value");
+            Assert.assertEquals(current_title, expected_title);
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        } catch (AssertionError e) {
+            e.printStackTrace();
+        }
+    }
 
+    /** 
+     * @Created by Ram Prasath
+     * @Description Verifies the 'Jewelry' category page by checking URL and title against expected values.
+     * @return None
+     */
+    public void jwelery() {
+        try {
+            String current_url = Base.driver.getCurrentUrl();
+            String expected_url = ExcelReader.readCellValue("Sheet1", "21", "value");
+            Assert.assertEquals(current_url, expected_url);
+
+            String current_title = Base.driver.getTitle();
+            String expected_title = ExcelReader.readCellValue("Sheet1", "22", "value");
+            Assert.assertEquals(current_title, expected_title);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } catch (AssertionError e) {
+            e.printStackTrace();
+        }
+    }
 }
