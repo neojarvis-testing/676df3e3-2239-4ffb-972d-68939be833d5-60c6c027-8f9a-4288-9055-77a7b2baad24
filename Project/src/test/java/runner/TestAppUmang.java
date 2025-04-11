@@ -21,7 +21,7 @@ public class TestAppUmang extends Base {
 
     @BeforeClass
     public static void reportGenerate() {
-        reports = GenerateReport.createReporter("Mayors_Report");
+        reports = GenerateReport.initializeExtentReport("Mayors_Report");
 
     }
 
